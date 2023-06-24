@@ -5,8 +5,6 @@ const express = require('express')
 const mongoose = require('mongoose')
 const taskRoutes = require('./routes/tasks')
 const userRoutes = require('./routes/user')
-const cors = require('cors')
-const corsOptions = require('./config/corsOptions')
 
 // clear    To clear the terminal
 // cancle process in terminal : ctrl + c
@@ -22,7 +20,7 @@ const corsOptions = require('./config/corsOptions')
 
 // fire up the express app
 const app = express()
-app.use(cors(corsOptions))
+
 // middleware
 app.use(express.json()) // parse and attach to the req object
 
