@@ -5,6 +5,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const taskRoutes = require('./routes/tasks')
 const userRoutes = require('./routes/user')
+const PORT = process.env.PORT || 4000
 
 // clear    To clear the terminal
 // cancle process in terminal : ctrl + c
