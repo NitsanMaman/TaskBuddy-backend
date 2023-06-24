@@ -1,6 +1,4 @@
 require('dotenv').config()
-
-
 const express = require('express')
 const mongoose = require('mongoose')
 const taskRoutes = require('./routes/tasks')
@@ -21,6 +19,12 @@ const PORT = process.env.PORT || 4000
 
 // fire up the express app
 const app = express()
+
+app.use(
+    cors({
+      origin: ["http://localhost:4000", "https://taskbuddy.onrender.com"],
+    })
+  );  
 
 // middleware
 app.use(express.json()) // parse and attach to the req object
